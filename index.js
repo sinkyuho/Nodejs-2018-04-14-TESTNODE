@@ -1,5 +1,5 @@
 console.log('Hello, world');
-console.log(process.version);   //버전
-console.log(process.memoryUsage());   //잡아먹는 메모리
-console.log(process.env);
-console.log(module);  //모듈이란?
+const circle = require('./circle');
+console.log('Area of a circle = ' + circle.area(3));
+console.log('Circumfrence of a circle=' +circle.circum(3));
+console.log('PI = ' +circle.pi);
