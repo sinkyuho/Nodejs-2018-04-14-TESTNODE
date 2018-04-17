@@ -1,5 +1,8 @@
 function route(pathname){
     console.log('Routiing for' + pathname);
+    if(typeof handle[pathname] === 'function')
+    return handle[pathname]();
+    else return '404 not dfound!';
 }
 
 exports.route = route;
