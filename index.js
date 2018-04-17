@@ -1,9 +1,8 @@
-console.log('Hello, world');
-const circle = require('./circle');
-console.log('Area of a circle = ' + circle.area(3));
-console.log('Circumfrence of a circle=' +circle.circum(3));
-console.log('PI = ' +circle.pi);
-
-const square = require('./square');
-let mySquare = square(4);
-console.log('Area of a square =' + mySquare.area());
+const http = require('http');
+let server = http.createServer(function(req, res) {
+res.writeHead(200, {'Content-type': 'text/html'});
+res.write('Hello, world');
+res.end();
+})
+server.listen(8000, 'localhost');
+console.log('Server is running at loaclhost:8000');
